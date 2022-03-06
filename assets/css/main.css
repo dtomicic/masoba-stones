@@ -64,6 +64,7 @@
   display: flex;
   position: fixed;
   background-color: #FDFCFC;
+  overflow: hidden;
   height: 100vh;
   left: 100%;
   -webkit-box-orient: vertical;
@@ -76,6 +77,7 @@
   background-color: #ebebeb;
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
+  overflow: hidden;
 }
 
 .navigation__popUpMenuContent {
@@ -197,6 +199,10 @@
           transform: rotate(45deg) translate(-8px, 0px);
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 .bannerPicture {
   background-image: url("/assets/img/banner1.jpeg");
   width: 100%;
@@ -209,6 +215,113 @@
   .bannerPicture {
     height: 60vh;
     background-position: 0 90%;
+  }
+}
+
+.aboutUsCard {
+  background-color: white;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.9375rem;
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  padding: 2.5rem 0;
+  margin-bottom: 1.875rem;
+  max-width: 18.75rem;
+}
+
+.aboutUsCardPicture {
+  width: 30%;
+  margin-bottom: 1.875rem;
+  max-width: 4.9375rem;
+}
+
+.aboutUsCardText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  width: 75%;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .aboutUsCard {
+    max-width: 38.4375rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aboutUsCard.accent {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .aboutUsCardText {
+    text-align: left;
+    width: 35%;
+    margin: 0 3.75rem;
+  }
+  .aboutUsCardPicture {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .aboutUsCard {
+    max-width: 50rem;
+  }
+  .aboutUsCardPicture {
+    max-width: 7.5rem;
+  }
+  .aboutUsCardText {
+    font-size: 1.25rem;
+  }
+}
+
+.aboutUs {
+  background-color: #FDFCFC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.aboutUsHeader {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 1.5625rem 0 2.1875rem 0;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 1400px) {
+  .aboutUsHeader {
+    font-size: 1.75rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
