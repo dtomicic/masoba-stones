@@ -196,4 +196,19 @@
   -webkit-transform: rotate(45deg) translate(-8px, 0px);
           transform: rotate(45deg) translate(-8px, 0px);
 }
+
+.bannerPicture {
+  background-image: url("/assets/img/banner1.jpeg");
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-position: 0 80%;
+}
+
+@media (min-width: 768px) {
+  .bannerPicture {
+    height: 60vh;
+    background-position: 0 90%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
