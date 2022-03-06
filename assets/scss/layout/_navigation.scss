@@ -1,0 +1,159 @@
+// Main styling
+
+.navigation {
+  background-color: $white;
+
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: toRem(10) toRem(20);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__menuBtn {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &Bar {
+      width: toRem(25);
+      height: toRem(3);
+      background-color: $black;
+      margin: toRem(2) 0;
+      transition: 0.4s;
+    }
+  }
+
+  &__items {
+    display: none;
+  }
+
+  &__popUpMenu {
+    z-index: 9999;
+    width: 80%;
+    display: flex;
+    position: fixed;
+    background-color: $white;
+    height: 100vh;
+    left: 100%;
+    flex-direction: column;
+    padding-top: toRem(30);
+    box-shadow: inset 0 toRem(1) toRem(4) rgba(0, 0, 0, 0.1);
+    background-color: #ebebeb;
+    transition: ease-in-out 0.4s;
+
+    &Content {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-left: toRem(30);
+      gap: toRem(15);
+      font-family: $mainFont;
+      font-weight: 600;
+
+      &Link {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+
+    &Language {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: toRem(8);
+
+      &Link {
+        text-decoration: none;
+        color: $black;
+      }
+
+      &Active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &Line {
+          background-color: $black;
+          width: toRem(25);
+          height: toRem(2);
+        }
+      }
+    }
+  }
+}
+
+// Breakpoints
+
+@media (min-width: $breakTablet) {
+  .navigation__menuBtn {
+    display: none;
+  }
+
+  .navigation__items {
+    display: flex;
+    gap: toRem(20);
+    font-family: $mainFont;
+    font-weight: 600;
+    
+    &Link {
+      text-decoration: none;
+      color: $black;
+      transition: ease-in-out 0.3s;
+
+      &:hover {
+        color: #8b8b8b;
+      }
+    }
+  }
+}
+
+@media (min-width: $break1200) {
+  .navigation__logoPicture {
+    width: toRem(200);
+  }
+
+  .navigation__items {
+    font-size: toRem(20);
+    gap: toRem(25);
+  }
+}
+
+@media (min-width: $break1400) {
+  .navigation__logoPicture {
+    width: toRem(220);
+  }
+
+  .navigation__items {
+    font-size: toRem(22);
+  }
+}
+
+
+// Classes for JS
+
+.shown {
+  left: 20%;
+  transition: ease-in-out 0.4s;
+}
+
+.transform {
+  
+  &.btnBar1 {
+    transform: rotate(-45deg) translate(-9px, 2px);
+  }
+
+  &.btnBar2 {
+    opacity: 0;
+  }
+
+  &.btnBar3 {
+    transform: rotate(45deg) translate(-8px, 0px);
+  }
+
+}
