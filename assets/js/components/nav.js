@@ -1,6 +1,7 @@
 var hamburger = document.getElementById('menuBtn');
 var bar = document.getElementsByClassName('navigation__menuBtnBar');
 var popUp = document.getElementsByClassName('navigation__popUpMenu');
+var body = document.body;
 
 
 hamburger.addEventListener('click', function(){
@@ -10,4 +11,5 @@ hamburger.addEventListener('click', function(){
   document.querySelectorAll('.navigation__popUpMenu').forEach(item => {
     item.classList.toggle('shown');
   })
+  body.classList.toggle('noscroll');
 })

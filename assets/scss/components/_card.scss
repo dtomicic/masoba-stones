@@ -1,0 +1,65 @@
+.aboutUsCard {
+  background-color: white;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: toRem(15);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  padding: toRem(40) 0;
+  margin-bottom: toRem(30);
+  max-width: toRem(300);
+
+  &Picture {
+    width: 30%;
+    margin-bottom: toRem(30);
+    max-width: toRem(79);
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: $mainFont;
+    width: 75%;
+    gap: toRem(8);
+  }
+}
+
+// Breakpoints 
+
+@media (min-width: $breakTablet) {
+  .aboutUsCard {
+    max-width: toRem(615);
+    flex-direction: row;
+    justify-content: center;
+
+    &.accent {
+      flex-direction: row-reverse;
+    }
+
+    &Text {
+      text-align: left;
+      width: 35%;
+      margin: 0 toRem(60);
+    }
+
+    &Picture {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $break1400) {
+  .aboutUsCard {
+    max-width: toRem(800);
+  }
+  .aboutUsCardPicture {
+    max-width: toRem(120);
+  }
+
+  .aboutUsCardText {
+    font-size: toRem(20);
+    
+  }
+}
