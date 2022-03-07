@@ -112,25 +112,13 @@
   font-weight: 600;
 }
 
-.navigation__popUpMenuContentActive {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.navigation__popUpMenuContentActiveLine {
-  background-color: #353535;
-  width: 25%;
-  height: 0.125rem;
-}
-
 .navigation__popUpMenuContentLink {
   text-decoration: none;
   color: #353535;
+}
+
+.navigation__popUpMenuContentLink.active {
+  color: #777777;
 }
 
 .navigation__popUpMenuLanguage {
