@@ -70,20 +70,13 @@
       font-family: $mainFont;
       font-weight: 600;
 
-      &Active {
-        display: flex;
-        flex-direction: column;
-
-        &Line {
-          background-color: $black;
-          width: 25%;
-          height: toRem(2);
-        }
-      }
-
       &Link {
         text-decoration: none;
         color: $black;
+
+        &.active {
+          color: rgb(119, 119, 119);
+        }
       }
     }
 
