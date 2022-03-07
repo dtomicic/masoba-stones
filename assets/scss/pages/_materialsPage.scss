@@ -1,0 +1,96 @@
+.materialsSection {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: toRem(30);
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: toRem(60);
+        max-width: toRem(375);
+
+        &Text {
+            display: flex;
+            flex-direction: column;
+            font-family: $mainFont;
+            color: $black;
+            width: 70%;
+            text-align: center;
+            gap: toRem(10);
+            margin-bottom: toRem(25);
+        
+            &Header {
+                font-weight: 700;
+                font-size: toRem(22);
+            }
+        }
+
+        &Picture {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            &Item {
+                width: 50%;
+                border-radius: toRem(15);
+            }
+        }
+    }
+}
+
+// Breakpoints
+@media (min-width: $breakTablet) {
+    .materialsSection {
+        padding-top: toRem(60);
+
+        &__card {
+            flex-direction: row;
+            max-width: 1000px;
+
+            &.accent {
+                flex-direction: row-reverse;
+            }
+
+            &Text {
+                width: 40%;
+                text-align: left;
+                margin-left: toRem(60);
+
+                &.accented {
+                    text-align: right;
+                    margin-left: 0;
+                    margin-right: toRem(60);
+                }
+            }
+
+            &Picture {
+                width: 50%;
+                margin-left: toRem(60);
+
+                &.accentPic {
+                    margin-left: 0;
+                    margin-right: toRem(60);
+                }
+
+                &Item {
+                    width: 65%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $break1400) {
+    .materialsSection__cardTextHeader {
+        font-size: toRem(28);
+    }
+
+    .materialsSection__cardTextParagraph {
+        font-size: toRem(20);
+    }
+}
