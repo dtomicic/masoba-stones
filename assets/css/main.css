@@ -54,6 +54,23 @@
 
 .navigation__items {
   display: none;
+  margin-right: 0.625rem;
+}
+
+.navigation__itemsActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navigation__itemsActiveLine {
+  width: 100%;
+  height: 0.125rem;
+  background-color: #353535;
 }
 
 .navigation__popUpMenu {
@@ -93,6 +110,22 @@
   gap: 0.9375rem;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
+}
+
+.navigation__popUpMenuContentActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navigation__popUpMenuContentActiveLine {
+  background-color: #353535;
+  width: 25%;
+  height: 0.125rem;
 }
 
 .navigation__popUpMenuContentLink {
@@ -326,7 +359,7 @@
 }
 
 .bannerPicture {
-  background-image: url("/assets/img/banner1.jpeg");
+  background-image: url("../img/banner1.jpeg");
   width: 100%;
   height: 50vh;
   background-size: cover;
@@ -444,6 +477,125 @@
 @media (min-width: 1400px) {
   .aboutUsHeader {
     font-size: 1.75rem;
+  }
+}
+
+.materialsSection {
+  background-color: #FDFCFC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1.875rem;
+}
+
+.materialsSection__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: 3.75rem;
+  max-width: 23.4375rem;
+}
+
+.materialsSection__cardText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #353535;
+  width: 70%;
+  text-align: center;
+  gap: 0.625rem;
+  margin-bottom: 1.5625rem;
+}
+
+.materialsSection__cardTextHeader {
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+
+.materialsSection__cardPicture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.materialsSection__cardPictureItem {
+  width: 50%;
+  border-radius: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+  .materialsSection {
+    padding-top: 3.75rem;
+  }
+  .materialsSection__card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 1000px;
+  }
+  .materialsSection__card.accent {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .materialsSection__cardText {
+    width: 40%;
+    text-align: left;
+    margin-left: 3.75rem;
+  }
+  .materialsSection__cardText.accented {
+    text-align: right;
+    margin-left: 0;
+    margin-right: 3.75rem;
+  }
+  .materialsSection__cardPicture {
+    width: 50%;
+    margin-left: 3.75rem;
+  }
+  .materialsSection__cardPicture.accentPic {
+    margin-left: 0;
+    margin-right: 3.75rem;
+  }
+  .materialsSection__cardPictureItem {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .materialsSection__cardTextHeader {
+    font-size: 1.75rem;
+  }
+  .materialsSection__cardTextParagraph {
+    font-size: 1.25rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
