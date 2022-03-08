@@ -1,10 +1,10 @@
-var hamburger = document.getElementById('menuBtn');
-var bar = document.getElementsByClassName('navigation__menuBtnBar');
-var popUp = document.getElementsByClassName('navigation__popUpMenu');
-var body = document.body;
+const hamburger = document.getElementById('menuBtn');
+const bar = document.getElementsByClassName('navigation__menuBtnBar');
+const popUp = document.getElementsByClassName('navigation__popUpMenu');
+const body = document.body;
 
 
-hamburger.addEventListener('click', function(){
+hamburger.addEventListener('click', () =>{
   document.querySelectorAll('.navigation__menuBtnBar').forEach(element => {
     element.classList.toggle('transform');
   })
