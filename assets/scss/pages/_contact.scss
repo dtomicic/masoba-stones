@@ -1,0 +1,118 @@
+.contact {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        font-family: $mainFont;
+        font-weight: 700;
+        font-size: toRem(22);
+        margin: toRem(30) 0 toRem(25) 0;
+    }
+
+    &__boxSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__box {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        text-align: center;
+        font-family: $mainFont;
+        max-width: toRem(380);
+        padding: toRem(20);
+        margin-bottom: toRem(40);
+
+        &.accentedBox {
+            background-color: $black;
+            color: $white;
+        }
+
+        &Text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &Header {
+                margin-bottom: toRem(15);
+            }
+
+            &Paragraph {
+                margin-bottom: toRem(20);
+                width: 80%;
+            }
+
+            &Btn {
+                background-color: $black;
+                width: 70%;
+                padding: toRem(15) toRem(5);
+                display: flex;
+                justify-content: center;
+                transition: ease-in-out 0.4s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 toRem(2) black;
+                }
+
+                &.accentedBtn {
+                    background-color: $white;
+
+                    &:hover {
+                        box-shadow: 0 0 toRem(2) white;
+                    }
+                }
+
+                &Link {
+                    text-decoration: none;
+                    color: $white;
+
+                    &.accentedLink {
+                        color: $black;
+                    }
+                }
+
+                &Header {
+                    font-size: toRem(18);
+                }
+            }
+        }
+    }
+}
+
+// Breakpoints 
+@media (min-width: $breakTablet) {
+    .contact__boxSection {
+        flex-direction: row;
+        gap: toRem(50);
+    }
+
+    .contact__box {
+        max-width: toRem(300);
+    }
+}
+
+@media (min-width: $break1400) {
+    .contact__header {
+        font-size: toRem(28);
+        margin-bottom: toRem(70);
+    }
+
+    .contact__box {
+        max-width: toRem(500);
+
+        &TextParagraph {
+            width: 70%;
+        }
+
+        &TextBtn {
+            margin-top: toRem(20);
+        }
+    }
+}
