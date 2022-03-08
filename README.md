@@ -27,4 +27,4 @@ There are some fixes to be done though specifically with some minor issues on mo
 - JavaScript
  
 ## Live preview
-TBA
+[Click for live preview](https://masoba-stones.vercel.app/)
